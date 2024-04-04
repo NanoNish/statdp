@@ -119,7 +119,7 @@ def run_algorithm(algorithm, d1, d2, kwargs, event, total_iterations):
             all_possible_events = tuple(itertools.product(*event_search_space))
 
         for event in all_possible_events:
-            cx_check, cy_check = np.full(iterations, True, dtype=np.bool), np.full(iterations, True, dtype=np.bool)
+            cx_check, cy_check = np.full(iterations, True, dtype=np.bool_), np.full(iterations, True, dtype=np.bool_)
             # check for all events in the return values
             for row in range(len(result_d1)):
                 if np.issubdtype(type(event[row]), np.number):
